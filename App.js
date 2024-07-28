@@ -6,14 +6,14 @@ export default function App(){
   const [nome, setNome] = useState("Guido");
   const [idade, setIdade] = useState(20);
   
-  function entrar(){
-    setNome("Sujeito Programador")
-    setIdade(24);
+  function entrar(nome, idade){
+    setNome(nome)
+    setIdade(idade);
   }
 
   return(
     <View style={{marginTop:30}}>
-      <Button title='Mudar nome' onPress={entrar}/>  
+      <Button title='Mudar nome' onPress={() => entrar("guidostocco", 24)}/>  
       
       <Text style={{fontSize:20}}>{nome}</Text>
       <Text style={{color:'#ff0000', fontSize: 25}} >Meu primeiro app</Text>
